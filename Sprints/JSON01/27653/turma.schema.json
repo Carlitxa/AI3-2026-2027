@@ -1,0 +1,121 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+
+  "properties": {
+    "disciplina": {
+      "type": "string",
+      "pattern": "^Aplicacoes .+"
+    },
+
+    "codigo": {
+      "type": "string",
+      "enum": ["12A", "13A", "14A", "34A", "40A"]
+    },
+
+    "totalAlunos": {
+      "type": "integer",
+      "minimum": 16,
+      "maximum": 24
+    },
+
+    "docenteTeorica": {
+      "type": "string",
+      "minLength": 5,
+      "maxLength": 40,
+      "pattern": "^[A-Z][a-z]+ [A-Z][a-z]+$"
+    },
+
+    "numeroInscritosTp1": {
+      "type": "integer"
+    },
+
+    "docenteTp1": {
+      "type": "string",
+      "minLength": 5,
+      "maxLength": 40,
+      "pattern": "^[A-Z][a-z]+ [A-Z][a-z]+$"
+    },
+
+    "numeroInscritosTp2": {
+      "type": "integer"
+    },
+
+    "docenteTp2": {
+      "type": "string",
+      "minLength": 5,
+      "maxLength": 40,
+      "pattern": "^[A-Z][a-z]+ [A-Z][a-z]+$"
+    },
+
+    "data": {
+      "type": "string",
+      "enum": [
+        "08-10-2026",
+        "09-10-2026",
+        "18-11-2026"
+      ]
+    },
+
+    "cursos": {
+      "type": "array",
+      "minItems": 2,
+      "maxItems": 2,
+      "items": {
+        "type": "string",
+        "enum": ["tdm", "ei", "msti", "rsi"]
+      }
+    },
+
+    "contacto": {
+      "anyOf": [
+        {
+          "type": "integer",
+          "minimum": 200000000,
+          "maximum": 999999999
+        },
+        {
+          "type": "string",
+          "enum": ["naoAplicavel"]
+        }
+      ]
+    },
+
+    "planoAno1": {
+      "oneOf": [
+        {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "string",
+            "enum": ["ADM1", "API1", "BD1"]
+          }
+        },
+        {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "string",
+            "enum": ["ID1", "SI1", "SD1"]
+          }
+        }
+      ]
+    }
+  },
+
+  "required": [
+    "disciplina",
+    "codigo",
+    "totalAlunos",
+    "docenteTeorica",
+    "data",
+    "cursos",
+    "contacto",
+    "planoAno1"
+  ],
+
+  "dependencies": {
+    "numeroInscritosTp1": ["docenteTp1"],
+    "numeroInscritosTp2": ["docenteTp2"]
+  }
+}
