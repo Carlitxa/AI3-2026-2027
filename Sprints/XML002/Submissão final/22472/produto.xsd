@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <xsd:element name="Product">
+        <xsd:complexType mixed="true">
+            <xsd:sequence>
+                <xsd:element name="ProductName" type="xsd:string"/><!--Um nome necessita ser uma string-->
+                <xsd:element name="ProductType" type="xsd:string"/><!--Type deveria ser uma lista entre tipos, em que apenas aquela seleção de strings seria permitida. Mas por falta desta opção decidi colocar como string.-->
+                <xsd:element name="Price" type="xsd:float"/><!--É necessario ter precisão a nivel decimal para calcular preços-->
+                <xsd:element name="Class" type="xsd:string"/><!--Mesma justificação que product type-->
+                <xsd:element name="Company" type="xsd:string"/><!--Mesma justificação que company-->
+                <xsd:element name="Provider" minOccurs="0" maxOccurs="3">
+                    <xsd:complexType>
+                        <xsd:sequence>
+                            <xsd:element name="Name" type="xsd:string"/>
+                            <xsd:element name="City" type="xsd:string"/>
+                        </xsd:sequence>
+                    </xsd:complexType>
+                </xsd:element>
+            </xsd:sequence>
+            <xsd:attribute name="ProductID" type="xsd:positiveInteger" use="required"/> <!--Identificadores são obrigatorios para facilitar a busca por elementos expecificos na base de dados. Para alem disso para não causar erros e confusão, numeros inteiros positivos são mais apropriados.-->
+            <xsd:attribute name="Category" type="xsd:string" use="optional"/>
+        </xsd:complexType> 
+    </xsd:element>
+</xsd:schema>

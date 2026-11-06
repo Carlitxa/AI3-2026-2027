@@ -1,0 +1,10 @@
+HTTP/1.1 201 Created
+X-Powered-By: Express
+Content-Type: application/json; charset=utf-8
+Content-Length: 193
+ETag: W/"c1-MZwZV88NdTmfRFov9cB5aYUunQo"
+Date: Thu, 29 Oct 2026 12:02:24 GMT
+Connection: keep-alive
+Keep-Alive: timeout=5
+
+{"titulo":"Sugestao de teste da API","descricao":"Esta sugestao serve para testar o funcionamento da API e verificar a criacao de uma nova sugestao.","categoria":"ensino","numeroAluno":"12345"}

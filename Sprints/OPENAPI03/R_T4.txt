@@ -1,0 +1,11 @@
+HTTP/1.1 200 OK
+X-Powered-By: Express
+Cache-Control: private, no-cache
+Content-Type: application/json; charset=utf-8
+Content-Length: 663
+ETag: W/"297-qV7OhHAqs8SjWaUr3xReKihCRxI"
+Date: Thu, 29 Oct 2026 11:42:17 GMT
+Connection: keep-alive
+Keep-Alive: timeout=5
+
+{"pagina":1,"tamanhoPagina":20,"total":2,"itens":[{"id":1,"titulo":"Mais tomadas na biblioteca","descricao":"Seria útil haver mais tomadas junto às mesas de estudo da biblioteca.","categoria":"instalacoes","numeroAluno":"12345","estado":"aceite","dataCriacao":"2026-10-01T09:15:00Z","dataAtualizacao":"2026-10-08T14:30:00Z","dataResolucao":null},{"id":2,"titulo":"Horário alargado da cantina","descricao":"Propõe-se alargar o horário da cantina até às 15h00 para quem tem aulas à tarde.","categoria":"servicos","numeroAluno":"12345","estado":"submetida","dataCriacao":"2026-10-05T11:00:00Z","dataAtualizacao":"2026-10-05T11:00:00Z","dataResolucao":null}]}

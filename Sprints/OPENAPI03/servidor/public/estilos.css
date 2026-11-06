@@ -1,0 +1,172 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+:root {
+  color-scheme: dark;
+  --cor-texto: #e6edf3;
+  --cor-fundo: #0d1117;
+  --cor-superficie: #161b22;
+  --cor-borda: #30363d;
+  --cor-borda-campo: #8b949e;
+  --cor-detalhe: #a5b1bd;
+  --cor-primaria: #1f6feb;
+  --cor-primaria-texto: #ffffff;
+  --cor-secundaria: #79c0ff;
+  --cor-foco: #ff7bce;
+  --cor-erro-texto: #ffb3bb;
+  --cor-erro-fundo: #3d161b;
+  --cor-erro-borda: #ff7b86;
+}
+
+:root[data-tema="claro"] {
+  color-scheme: light;
+  --cor-texto: #1f2328;
+  --cor-fundo: #ffffff;
+  --cor-superficie: #f6f8fa;
+  --cor-borda: #d1d9e0;
+  --cor-borda-campo: #818b98;
+  --cor-detalhe: #59636e;
+  --cor-primaria: #0969da;
+  --cor-primaria-texto: #ffffff;
+  --cor-secundaria: #0550ae;
+  --cor-foco: #8250df;
+  --cor-erro-texto: #82071e;
+  --cor-erro-fundo: #ffebe9;
+  --cor-erro-borda: #cf222e;
+}
+
+*,
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  line-height: 1.5;
+  color: var(--cor-texto);
+  background: var(--cor-fundo);
+}
+
+main {
+  max-width: 40rem;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+h1 {
+  font-size: 1.5rem;
+}
+
+h2 {
+  font-size: 1.2rem;
+}
+
+section {
+  background: var(--cor-superficie);
+  border: 1px solid var(--cor-borda);
+  border-radius: 0.5rem;
+  padding: 1rem;
+  margin-top: 1rem;
+}
+
+[hidden] {
+  display: none !important;
+}
+
+label {
+  display: block;
+  margin-top: 0.75rem;
+  font-weight: 600;
+}
+
+input,
+select,
+textarea {
+  display: block;
+  width: 100%;
+  min-height: 2.75rem;
+  margin-top: 0.25rem;
+  padding: 0.5rem;
+  font: inherit;
+  color: var(--cor-texto);
+  background: var(--cor-fundo);
+  border: 1px solid var(--cor-borda-campo);
+  border-radius: 0.25rem;
+}
+
+textarea {
+  min-height: 6rem;
+  resize: vertical;
+}
+
+button {
+  min-height: 2.75rem;
+  margin-top: 1rem;
+  padding: 0.5rem 1rem;
+  font: inherit;
+  font-weight: 600;
+  color: var(--cor-primaria-texto);
+  background: var(--cor-primaria);
+  border: 2px solid var(--cor-primaria);
+  border-radius: 0.25rem;
+  cursor: pointer;
+}
+
+button.secundario {
+  color: var(--cor-secundaria);
+  background: var(--cor-superficie);
+  border-color: var(--cor-secundaria);
+}
+
+.acoes {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+/* Foco sempre visível */
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible,
+button:focus-visible {
+  outline: 3px solid var(--cor-foco);
+  outline-offset: 2px;
+}
+
+/* Mensagens de erro: borda, ícone e prefixo, e não só a cor */
+#mensagem:not(:empty) {
+  margin-top: 1rem;
+  padding: 0.75rem 1rem;
+  font-weight: 600;
+  color: var(--cor-erro-texto);
+  background: var(--cor-erro-fundo);
+  border: 2px solid var(--cor-erro-borda);
+  border-left-width: 0.6rem;
+  border-radius: 0.25rem;
+  overflow-wrap: anywhere;
+}
+
+#mensagem:not(:empty)::before {
+  content: "⚠ Erro: ";
+}
+
+#lista-sugestoes {
+  list-style: none;
+  margin: 1rem 0 0;
+  padding: 0;
+}
+
+#lista-sugestoes li {
+  padding: 0.75rem 0;
+  border-top: 1px solid var(--cor-borda);
+  overflow-wrap: anywhere;
+}
+
+#lista-sugestoes .titulo {
+  display: block;
+  font-weight: 600;
+}
+
+#lista-sugestoes .detalhe {
+  display: block;
+  color: var(--cor-detalhe);
+}

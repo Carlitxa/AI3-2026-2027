@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="pt-PT">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Sugestões dos Alunos</title>
+  <link rel="stylesheet" href="/estilos.css">
+  <script type="module" src="/app.js"></script>
+</head>
+<body data-estado="a-verificar">
+  <header class="topo">
+    <p id="indicacao-ligacao" aria-live="polite">A verificar ligação…</p>
+    <button id="botao-atualizar" type="button" hidden>Atualizar a aplicação</button>
+  </header>
+
+  <main>
+    <h1>Sugestões dos Alunos</h1>
+    <div id="mensagem" role="status" aria-live="polite"></div>
+
+    <section id="estado-a-verificar" aria-live="polite">
+      <h2>A verificar sessão…</h2>
+    </section>
+
+    <section id="area-pendentes" aria-labelledby="titulo-pendentes" hidden>
+      <h2 id="titulo-pendentes">Sugestões por enviar</h2>
+      <ul id="lista-pendentes"></ul>
+    </section>
+
+    <section id="area-entrada" aria-labelledby="titulo-entrada" hidden>
+      <h2 id="titulo-entrada">Entrar</h2>
+      <form id="formulario-entrada">
+        <label for="utilizador">Utilizador</label>
+        <input id="utilizador" name="utilizador" type="text" autocomplete="username" required>
+
+        <label for="palavra-passe">Palavra-passe</label>
+        <input id="palavra-passe" name="palavraPasse" type="password" autocomplete="current-password" required>
+
+        <button id="botao-entrar" type="submit">Entrar</button>
+      </form>
+    </section>
+
+    <section id="area-sessao" aria-labelledby="titulo-sessao" hidden>
+      <h2 id="titulo-sessao" tabindex="-1">Sessão</h2>
+      <p>Utilizador: <strong id="nome"></strong> (<span id="papel"></span>)</p>
+      <p>A sessão expira às <time id="hora-expiracao"></time>.</p>
+      <p>Tempo restante: <span id="tempo-restante"></span></p>
+      <div class="acoes">
+        <button id="botao-sugestoes" type="button">Atualizar sugestões</button>
+        <button id="botao-terminar" type="button" class="secundario">Terminar sessão</button>
+      </div>
+      <p id="atualizado-em"></p>
+      <ul id="lista-sugestoes"></ul>
+    </section>
+
+    <section id="area-sem-ligacao" aria-labelledby="titulo-sem-ligacao" hidden>
+      <h2 id="titulo-sem-ligacao">Sem ligação</h2>
+      <p id="aviso-sem-ligacao">Não foi possível contactar o servidor.</p>
+      <div id="copia-local" hidden>
+        <p>Cópia de <time id="hora-copia"></time> — pode estar desatualizada.</p>
+        <p>Proprietário: <strong id="nome-proprietario"></strong></p>
+        <ul id="lista-sugestoes-offline"></ul>
+      </div>
+    </section>
+
+    <section id="secao-sugestao" aria-labelledby="titulo-formulario-sugestao" hidden>
+      <h2 id="titulo-formulario-sugestao">Nova sugestão</h2>
+      <p id="mensagem-categorias"></p>
+      <form id="formulario-sugestao">
+        <fieldset id="campos-sugestao" disabled>
+          <label for="titulo-sugestao">Título</label>
+          <input id="titulo-sugestao" name="titulo" required minlength="10" maxlength="120">
+
+          <label for="categoria-sugestao">Categoria</label>
+          <select id="categoria-sugestao" name="categoria" required>
+            <option value="">A carregar categorias…</option>
+          </select>
+
+          <label for="descricao-sugestao">Descrição</label>
+          <textarea id="descricao-sugestao" name="descricao" required minlength="20" maxlength="2000"></textarea>
+
+          <button id="botao-criar" type="submit">Criar sugestão</button>
+        </fieldset>
+      </form>
+    </section>
+
+  </main>
+
+  <dialog id="dialog-terminar" aria-labelledby="texto-dialog-terminar">
+    <p id="texto-dialog-terminar"></p>
+    <div class="acoes">
+      <button id="confirmar-terminar" type="button">Terminar sessão</button>
+      <button id="cancelar-terminar" type="button" class="secundario">Cancelar</button>
+    </div>
+  </dialog>
+</body>
+</html>

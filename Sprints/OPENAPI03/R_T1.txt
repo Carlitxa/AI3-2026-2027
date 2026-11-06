@@ -1,0 +1,12 @@
+HTTP/1.1 200 OK
+X-Powered-By: Express
+Set-Cookie: sessao=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NSIsIm5vbWUiOiJBbmEgU2lsdmEiLCJwYXBlbCI6ImFsdW5vIiwiaWF0IjoxNzkzMjc1MTgzLCJleHAiOjE3OTMyNzYwODN9.3IXtmskzEAhA7cmxJhMnUFWCAMvQ5mqzURagxFepTZw; Max-Age=900; Path=/v2; Expires=Thu, 29 Oct 2026 12:14:43 GMT; HttpOnly; SameSite=Strict
+Cache-Control: no-store
+Content-Type: application/json; charset=utf-8
+Content-Length: 72
+ETag: W/"48-qApZtkDdXUgbxFKRwGdvFrhcWjg"
+Date: Thu, 29 Oct 2026 11:59:43 GMT
+Connection: keep-alive
+Keep-Alive: timeout=5
+
+{"utilizador":"12345","nome":"Ana Silva","papel":"aluno","expiraEm":900}

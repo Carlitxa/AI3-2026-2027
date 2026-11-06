@@ -1,0 +1,183 @@
+openapi: 3.0.3
+info:
+  title: API de Sugestões dos Alunos
+  version: 1.0.0
+servers:
+  - url: https://api.estgv.exemplo/v1
+paths:
+  /sugestoes:
+    #seguro: sim | indepotente: sim
+    get:
+      operationId: listarSugestoes
+      summary: Listar sugestões com filtros e paginação
+      responses:
+        '200':
+          description: not found
+          content:
+            application/json:
+                schema:
+                  type: object
+        '404':
+          description: not found
+          content:
+            application/json:
+                schema:
+                  type: object
+    #seguro: não | indepotente: não
+    post:
+      operationId: criarSugestao
+      summary: Submeter uma sugestão
+      responses:
+        '200':
+          description: not found
+          content:
+            application/json:
+                schema:
+                  type: object
+        '404':
+          description: not found
+          content:
+            application/json:
+                schema:
+                  type: object
+  /sugestoes/{id}:
+    #seguro: sim | indepotente: sim
+    get:
+      operationId: obterSugestao
+      summary: Obter uma sugestão
+      responses:
+        '200':
+          description: not found
+          content:
+            application/json:
+                schema:
+                  type: object
+        '404':
+          description: not found
+          content:
+            application/json:
+                schema:
+                  type: object
+    #seguro: não | indepotente: sim
+    put:
+      operationId: substituirSugestao
+      summary: 	Editar uma sugestão ainda submetida
+      responses:
+        '200':
+          description: not found
+          content:
+            application/json:
+                schema:
+                  type: object
+        '404':
+          description: not found
+          content:
+            application/json:
+                schema:
+                  type: object
+    #seguro: não | indepotente: sim
+    delete:
+      operationId: retirarSugestao
+      summary: Retirar uma sugestão ainda submetida
+      responses:
+        '200':
+          description: not found
+          content:
+            application/json:
+                schema:
+                  type: object
+        '404':
+          description: not found
+          content:
+            application/json:
+                schema:
+                  type: object
+  /sugestoes/{id}/acompanhamentos:
+    #seguro: sim | indepotente: sim
+    get:
+      operationId: listarAcompanhamentos
+      summary: Histórico de acompanhamento, do mais antigo para o mais recente
+      responses:
+        '200':
+          description: not found
+          content:
+            application/json:
+                schema:
+                  type: object
+        '404':
+          description: not found
+          content:
+            application/json:
+                schema:
+                  type: object
+    #seguro: não | indepotente: não
+    post:
+      operationId: registarAcompanhamento
+      summary: Registar uma mudança de estado
+      responses:
+        '200':
+          description: not found
+          content:
+            application/json:
+                schema:
+                  type: object
+        '404':
+          description: not found
+          content:
+            application/json:
+                schema:
+                  type: object
+  /estatisticas/resolucao:
+    #seguro: sim | indepotente: sim
+    get:
+      operationId: obterEstatisticasResolucao
+      summary: Totais por estado, taxa e tempo médio de resolução
+      responses:
+        '200':
+          description: not found
+          content:
+            application/json:
+                schema:
+                  type: object
+        '404':
+          description: not found
+          content:
+            application/json:
+                schema:
+                  type: object
+  /estatisticas/categorias:
+    #seguro: sim | indepotente: sim
+    get:
+      operationId: 	obterEstatisticasCategorias
+      summary: Os mesmos indicadores, por categoria
+      responses:
+        '200':
+          description: not found
+          content:
+            application/json:
+                schema:
+                  type: object
+        '404':
+          description: not found
+          content:
+            application/json:
+                schema:
+                  type: object
+  /categorias:
+    #seguro: sim | indepotente: sim
+    get:
+      operationId: listarCategorias
+      summary: Listar as categorias e a sua descrição
+      responses:
+        '200':
+          description: not found
+          content:
+            application/json:
+                schema:
+                  type: object
+        '404':
+          description: not found
+          content:
+            application/json:
+                schema:
+                  type: object

@@ -1,0 +1,126 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  line-height: 1.5;
+  color: #1b1f24;
+  background: #f4f6f8;
+}
+
+main {
+  max-width: 40rem;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+h1 {
+  font-size: 1.5rem;
+}
+
+h2 {
+  font-size: 1.2rem;
+}
+
+section {
+  background: #ffffff;
+  border: 1px solid #c9d1d9;
+  border-radius: 0.5rem;
+  padding: 1rem;
+  margin-top: 1rem;
+}
+
+[hidden] {
+  display: none !important;
+}
+
+label {
+  display: block;
+  margin-top: 0.75rem;
+  font-weight: 600;
+}
+
+input {
+  display: block;
+  width: 100%;
+  min-height: 2.75rem;
+  margin-top: 0.25rem;
+  padding: 0.5rem;
+  font: inherit;
+  border: 1px solid #57606a;
+  border-radius: 0.25rem;
+}
+
+button {
+  min-height: 2.75rem;
+  margin-top: 1rem;
+  padding: 0.5rem 1rem;
+  font: inherit;
+  font-weight: 600;
+  color: #ffffff;
+  background: #0b57d0;
+  border: 2px solid #0b57d0;
+  border-radius: 0.25rem;
+  cursor: pointer;
+}
+
+button.secundario {
+  color: #0b57d0;
+  background: #ffffff;
+}
+
+.acoes {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+/* Foco sempre visível */
+input:focus-visible,
+button:focus-visible {
+  outline: 3px solid #bf3989;
+  outline-offset: 2px;
+}
+
+/* Mensagens de erro: borda, ícone e prefixo, e não só a cor */
+#mensagem:not(:empty) {
+  margin-top: 1rem;
+  padding: 0.75rem 1rem;
+  font-weight: 600;
+  color: #82071e;
+  background: #ffebe9;
+  border: 2px solid #82071e;
+  border-left-width: 0.6rem;
+  border-radius: 0.25rem;
+  overflow-wrap: anywhere;
+}
+
+#mensagem:not(:empty)::before {
+  content: "⚠ Erro: ";
+}
+
+#lista-sugestoes {
+  list-style: none;
+  margin: 1rem 0 0;
+  padding: 0;
+}
+
+#lista-sugestoes li {
+  padding: 0.75rem 0;
+  border-top: 1px solid #d0d7de;
+  overflow-wrap: anywhere;
+}
+
+#lista-sugestoes .titulo {
+  display: block;
+  font-weight: 600;
+}
+
+#lista-sugestoes .detalhe {
+  display: block;
+  color: #424a53;
+}

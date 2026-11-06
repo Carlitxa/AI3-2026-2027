@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-PT">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Sugestões dos Alunos</title>
+  <link rel="stylesheet" href="estilos.css">
+  <script type="module" src="app.js"></script>
+</head>
+<body>
+  <main>
+    <h1>Sugestões dos Alunos</h1>
+
+    <div id="mensagem" role="alert"></div>
+
+    <section id="area-entrada" aria-labelledby="titulo-entrada">
+      <h2 id="titulo-entrada">Entrar</h2>
+      <form id="formulario-entrada">
+        <label for="utilizador">Utilizador</label>
+        <input id="utilizador" name="utilizador" type="text" autocomplete="username" required>
+
+        <label for="palavra-passe">Palavra-passe</label>
+        <input id="palavra-passe" name="palavraPasse" type="password" autocomplete="current-password" required>
+
+        <button type="submit">Entrar</button>
+      </form>
+    </section>
+
+    <section id="area-sessao" aria-labelledby="titulo-sessao" hidden>
+      <h2 id="titulo-sessao">Sessão</h2>
+      <p>Utilizador: <strong id="nome"></strong> (<span id="papel"></span>)</p>
+      <p>O token expira às <span id="hora-expiracao"></span>.</p>
+      <p>Tempo restante: <span id="tempo-restante"></span></p>
+
+      <div class="acoes">
+        <button type="button" id="botao-sugestoes"></button>
+        <button type="button" id="botao-terminar" class="secundario">Terminar sessão</button>
+      </div>
+
+      <ul id="lista-sugestoes"></ul>
+    </section>
+  </main>
+</body>
+</html>

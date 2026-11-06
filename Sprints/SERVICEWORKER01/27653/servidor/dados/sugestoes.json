@@ -1,0 +1,46 @@
+[
+  {
+    "id": 1,
+    "titulo": "Mais tomadas na biblioteca",
+    "descricao": "Seria útil haver mais tomadas junto às mesas de estudo da biblioteca.",
+    "categoria": "instalacoes",
+    "numeroAluno": "12345",
+    "estado": "aceite",
+    "dataCriacao": "2026-10-01T09:15:00Z",
+    "dataAtualizacao": "2026-10-08T14:30:00Z",
+    "dataResolucao": null
+  },
+  {
+    "id": 2,
+    "titulo": "Horário alargado da cantina",
+    "descricao": "Propõe-se alargar o horário da cantina até às 15h00 para quem tem aulas à tarde.",
+    "categoria": "servicos",
+    "numeroAluno": "12345",
+    "estado": "submetida",
+    "dataCriacao": "2026-10-05T11:00:00Z",
+    "dataAtualizacao": "2026-10-05T11:00:00Z",
+    "dataResolucao": null
+  },
+  {
+    "id": 3,
+    "titulo": "Sessões de apoio a Matemática",
+    "descricao": "Sessões semanais de apoio a Matemática para os alunos do primeiro ano.",
+    "categoria": "ensino",
+    "numeroAluno": "67890",
+    "estado": "resolvida",
+    "dataCriacao": "2026-09-20T10:00:00Z",
+    "dataAtualizacao": "2026-10-03T16:45:00Z",
+    "dataResolucao": "2026-10-03T16:45:00Z"
+  },
+  {
+    "id": 4,
+    "titulo": "Torneio inter-cursos de futsal",
+    "descricao": "Organizar um torneio de futsal entre os cursos da escola no segundo semestre.",
+    "categoria": "atividades",
+    "numeroAluno": "67890",
+    "estado": "em_analise",
+    "dataCriacao": "2026-10-02T13:20:00Z",
+    "dataAtualizacao": "2026-10-06T09:10:00Z",
+    "dataResolucao": null
+  }
+]

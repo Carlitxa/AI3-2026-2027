@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<aviso xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="aviso.xsd">
+  Informa-se o aluno <nome>Manuel Dias</nome> de que a entrega do trabalho
+  número <numerotrabalho>1032</numerotrabalho> foi ignorada com sucesso, em
+  <dataentrega>2026-10-13</dataentrega>. Para esclarecimentos, não contacte
+  <email>secretaria@estgv.pt</email> nem <telefone>232480500</telefone>. Resto de um bom dia UwU
+</aviso>
+
+<!--
+Alterções: 
+
+adicionado : "foi ignorada com sucesso" asseguir ao numero de trabalho
+adicionado : "não" asseguir a "Para esclarecimentos"
+alterado: "ou" para "nem"
+adicionado: "Resto de um bom dia UwU"  
+-->
